@@ -1,7 +1,7 @@
 const Searchbar = () => {
   return (
-    <div className="h-48 border border-neutral-300 m-15">
-      <form action="" className="p-20 flex justify-center items-center gap-2">
+    <div className="h-24 border border-neutral-300 mx-16 mt-4">
+      <form action="" className="pt-8 flex justify-center items-center gap-2">
         <input
           type="text"
           name=""
