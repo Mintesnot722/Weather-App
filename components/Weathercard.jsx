@@ -1,15 +1,13 @@
-import { WiDaySunny } from "react-icons/wi";
-const Weathercard = () => {
+const Weathercard = (props) => {
   return (
     <div className="flex justify-around items-center bg-sky-100 mx-16 mt-4 border border-neutral-300 h-72">
       <div>
-        <p className="">Addis Abeba</p>
-        <p className="">Tuesday, may 21</p>
-        <WiDaySunny size={28} className="w-16 h-16" />
+        <p className="">{props.city}</p>
+        <p className="">{props.time}</p>
       </div>
       <div>
-        <p className="text-7xl">24°C</p>
-        <p className="">Partly claudy</p>
+        <p className="text-7xl">{props.temperature}°C </p>
+        <p className="">{props.condition}</p>
       </div>
     </div>
   );

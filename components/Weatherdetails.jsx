@@ -5,7 +5,7 @@ import {
   WiBarometer,
 } from "react-icons/wi";
 
-const WeatherDetails = () => {
+const WeatherDetails = (props) => {
   return (
     <section className="grid grid-cols-4 text-black mx-16 border mt-4 h-36 bg-white rounded-xl shadow p-6">
       <div className="flex flex-col items-center justify-center border-r border-gray-300">
@@ -15,7 +15,7 @@ const WeatherDetails = () => {
         "
         />
         <p className="">Humidity</p>
-        <p className="">24°C</p>
+        <p className="">{props.humidity}%</p>
       </div>
       <div className="flex flex-col items-center justify-center border-r border-gray-300">
         <WiStrongWind
@@ -24,7 +24,7 @@ const WeatherDetails = () => {
         "
         />
         <p className="">Wind</p>
-        <p className="">24°C</p>
+        <p className="">{props.wind}km/h</p>
       </div>
       <div className="flex flex-col items-center justify-center border-r border-gray-300">
         <WiBarometer
@@ -33,7 +33,7 @@ const WeatherDetails = () => {
         "
         />
         <p className="">Pressure</p>
-        <p className="">24°C</p>
+        <p className="">{props.pressure}hPa</p>
       </div>
       <div className="flex flex-col items-center justify-center ">
         <WiThermometer
@@ -42,7 +42,7 @@ const WeatherDetails = () => {
         "
         />
         <p className="">Feels Like</p>
-        <p className="">24°C</p>
+        <p className="">{props.feelsLike}°C</p>
       </div>
     </section>
   );
